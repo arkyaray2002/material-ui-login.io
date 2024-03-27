@@ -15,6 +15,11 @@
         align-items: center;
         height: 100vh;
     }
+    
+    marquee {
+        color: #03AC13;
+        font-size: 30px;
+    }
 
     .container {
         background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
@@ -72,15 +77,18 @@
     }
 
     @media only screen and (max-width: 600px) {
-    .container {
-        width: 300px; /* Increased width */
-        height: 300px; /* Increased height */
-    }
+            marquee {
+                font-size: 20px;
+            }
+            .container {
+                width: 300px; /* Increased width */
+                height: 300px; /* Increased height */
+            }
     }
 </style>
 </head>
 <body>
-
+    <marquee direction="right" behavior="alternate" scrollamount="25">Student Smart Attendence Syatem</marquee> 
 <div id="loginContainer" class="container hidden">
     <div class="login-form">
         <h2>Login</h2>
