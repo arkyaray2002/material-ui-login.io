@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #B0FC38;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        padding: 40px; /* Increased padding */
+        border-radius: 10px;
+        transition: transform 0.5s ease;
+        width: 400px; /* Increased width */
+        height: 300px; /* Increased height */
+    }
+
+    .login-form {
+        text-align: center;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        width: 100%;
+        padding: 12px; /* Increased padding for better spacing */
+        margin-bottom: 15px; /* Increased margin for better separation */
+        border: none; /* Removed border */
+        border-radius: 5px;
+        box-sizing: border-box;
+        background-color: #99EDC390; /* Color shade for input fields */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    .login-form input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px; /* Increased margin for better separation */
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background-color: #03C04A;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .hidden {
+        transform: translateY(100%);
+    }
+
+    .slide-in {
+        animation: slideIn 0.5s ease forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+    .container {
+        width: 300px; /* Increased width */
+        height: 300px; /* Increased height */
+    }
+    }
+</style>
+</head>
+<body>
+
+<div id="loginContainer" class="container hidden">
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <input type="text" name="username" placeholder="Username" required><br><br>
+            <input type="password" name="password" placeholder="Password" required><br><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var loginContainer = document.getElementById('loginContainer');
+    loginContainer.classList.remove('hidden');
+    loginContainer.classList.add('slide-in');
+});
+</script>
+
+</body>
+</html>
