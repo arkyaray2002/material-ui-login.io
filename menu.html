@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./menu.css"
+</head>
+<body>
+    <div class="title">
+        <h1>Student Smart Attendence System</h1>
+    </div>
+      <div class="card1" onclick="redirectToStudent()">
+        <img src="./images/student.png" alt="student_card">
+        <h3>Student List</h3>
+        <p>All the students, who've taken admission in the school, are listed here</p>
+      </div>
+      
+      <div class="card2" onclick="redirectToTeacher()">
+        <img src="./images/teacher.png" alt="teacher_card">
+        <h3>Teacher List</h3>
+        <p>All the students, who've taken admission in the school, are listed here</p>
+      </div>
+      
+      <div class="card3" onclick="redirectToAttendence()">
+        <img src="./images/attendence.png" alt="attendence_card">
+        <h3>Attendence</h3>
+        <p>All the teachers and students, who are present in the school today, will be appeared in this tab.</p>
+      </div>
+      <div class="footer">
+      </div>
+
+      <script>
+        function redirectToStudent() {
+          window.location.href = './student.html';
+        }
+
+        function redirectToTeacher() {
+          window.location.href = './teacher.html';
+        }
+
+        function redirectToAttendence() {
+          window.location.href = './attendence.html';
+        }
+    </script>
+</body>
+</html>
