@@ -6,12 +6,30 @@
     <title>Attendance List</title>
     <link rel="stylesheet" href="./menu.css">
     <style>
+        /* Center the iframe and adjust its width for smaller screens */
         iframe {
-            width: 700px;
-            height: 500px;
+            width: 60%; /* Make iframe responsive */
+            height: 500px; /* Keep the height fixed */
+            margin: auto;
+            display: block;
         }
+
+        /* Hide the Google Sheets title */
         .docs-sheet-title {
             display: none !important;
+        }
+
+        /* Adjustments for smaller screens */
+        @media only screen and (max-width: 768px) {
+            iframe {
+                width: 90%; /* Adjust width for tablets */
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            iframe {
+                width: 80%; /* Adjust width for smartphones */
+            }
         }
     </style>
 </head>
